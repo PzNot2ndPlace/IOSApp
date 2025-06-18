@@ -6,13 +6,31 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		8F99D4712E0252F600B5E1E0 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 8F99D4702E0252F600B5E1E0 /* FirebaseAnalytics */; };
+		8F99D4752E02554300B5E1E0 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 8F99D4742E02554300B5E1E0 /* FirebaseMessaging */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		8F99D40C2DFFF2FF00B5E1E0 /* T-Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "T-Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		8F99D4552E01A61800B5E1E0 /* Exceptions for "T-Assistant" folder in "T-Assistant" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8F99D40B2DFFF2FF00B5E1E0 /* T-Assistant */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		8F99D40E2DFFF2FF00B5E1E0 /* T-Assistant */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8F99D4552E01A61800B5E1E0 /* Exceptions for "T-Assistant" folder in "T-Assistant" target */,
+			);
 			path = "T-Assistant";
 			sourceTree = "<group>";
 		};
@@ -23,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F99D4752E02554300B5E1E0 /* FirebaseMessaging in Frameworks */,
+				8F99D4712E0252F600B5E1E0 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +85,8 @@
 			);
 			name = "T-Assistant";
 			packageProductDependencies = (
+				8F99D4702E0252F600B5E1E0 /* FirebaseAnalytics */,
+				8F99D4742E02554300B5E1E0 /* FirebaseMessaging */,
 			);
 			productName = "T-Assistant";
 			productReference = 8F99D40C2DFFF2FF00B5E1E0 /* T-Assistant.app */;
@@ -94,6 +116,9 @@
 			);
 			mainGroup = 8F99D4032DFFF2FF00B5E1E0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				8F99D46F2E0252F600B5E1E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 8F99D40D2DFFF2FF00B5E1E0 /* Products */;
 			projectDirPath = "";
@@ -249,14 +274,23 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"T-Assistant/Preview Content\"";
+				DEVELOPMENT_TEAM = BUF892U9LY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "T-Assistant/Info.plist";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Для экспорта напоминаний в ваш календарь";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Для определения вашего местоположения для автоматической отправки уведомлений.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для определения вашего местоположения при создании локации.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Для записи вашего голоса для распознавания речи.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Для преобразования вашего голоса в текст в чате.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -266,9 +300,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "tarchenko.T-Assistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -280,11 +319,19 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"T-Assistant/Preview Content\"";
+				DEVELOPMENT_TEAM = BUF892U9LY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "T-Assistant/Info.plist";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Для экспорта напоминаний в ваш календарь";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Для определения вашего местоположения для автоматической отправки уведомлений.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для определения вашего местоположения при создании локации.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Для записи вашего голоса для распознавания речи.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Для преобразования вашего голоса в текст в чате.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -294,9 +341,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "tarchenko.T-Assistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -322,6 +373,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F99D46F2E0252F600B5E1E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.14.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F99D4702E0252F600B5E1E0 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F99D46F2E0252F600B5E1E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		8F99D4742E02554300B5E1E0 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F99D46F2E0252F600B5E1E0 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8F99D4042DFFF2FF00B5E1E0 /* Project object */;
 }
